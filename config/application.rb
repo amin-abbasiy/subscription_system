@@ -13,8 +13,15 @@ module SubscriptionSystem
 
     # Configuration for the application, engines, and railties goes here.
     #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
+
+    #load environment variables from custom application.yml file 
+    if File.exist?(File.expand_path('application.yml', __dir__))
+      config = YAML.safe_load(File.read(File.expand_path('application.yml', __dir__)))
+      config.merge! config.fetch(Rails.env, {})
+      config.each do |key, value|
+        ENV[key] = value.to_s
+      end
+    end
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
