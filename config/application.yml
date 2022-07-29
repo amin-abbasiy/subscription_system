@@ -2,3 +2,7 @@ DATABASE_ADAPTER: 'postgresql'
 DATABASE_USERNAME: 'postgres'
 DATABASE_PASSWORD: 'apps'
 DATABASE_NAME: 'subscription_system'
+
+
+GOOGLE_CLIENT_SECRET: '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'
+GOOGLE_CLIENT_ID: '479331508044-pd9ooa45d3qin5lh72rubvjikd9mhsgp.apps.googleusercontent.com'
