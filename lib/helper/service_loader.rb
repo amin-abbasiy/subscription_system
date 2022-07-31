@@ -4,10 +4,8 @@ module ServiceLoader
   extend ActiveSupport::Concern
 
   included do
-    scope :disabled, -> { where(disabled: true) }
-  end
-
-  class_methods do
-    ...
+    include ::Interactor
+    include ::Virtus.model
+    include ::ActiveModel::Validations
   end
 end
