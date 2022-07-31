@@ -19,6 +19,8 @@ module SubscriptionSystem
 
     config.middleware.use config.session_store, config.session_options
 
+    #load lib folder files
+    config.autoload_paths += %W( lib/ lib/helper )
     #load environment variables from custom application.yml file 
     if File.exist?(File.expand_path('application.yml', __dir__))
       config = YAML.safe_load(File.read(File.expand_path('application.yml', __dir__)))

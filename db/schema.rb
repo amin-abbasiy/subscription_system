@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_30_181026) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_31_173732) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "googles", force: :cascade do |t|
+    t.integer "type"
+    t.bigint "user_id", null: false
+    t.string "access_token"
+    t.string "refresh_token"
+    t.string "id_token"
+    t.datetime "access_token_exp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_auth_providers_on_user_id"
+  end
 
   create_table "jwt_denylist", force: :cascade do |t|
     t.string "jti", null: false
@@ -38,4 +50,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_30_181026) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "googles", "users"
 end

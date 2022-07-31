@@ -51,6 +51,10 @@ gem 'rack-cors', '~> 1.1', '>= 1.1.1'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
+#Service Base Libraries
+gem 'virtus', '~> 2.0'
+gem 'interactor', '~> 3.1', '>= 3.1.2'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
