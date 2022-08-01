@@ -14,8 +14,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_173732) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "googles", force: :cascade do |t|
-    t.integer "type"
+  create_table "auth_providers", force: :cascade do |t|
+    t.string "email", null: false
+    t.integer "provider_type"
     t.bigint "user_id", null: false
     t.string "access_token"
     t.string "refresh_token"
@@ -50,5 +51,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_173732) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "googles", "users"
+  add_foreign_key "auth_providers", "users"
 end
