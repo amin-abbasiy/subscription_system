@@ -5,6 +5,7 @@ class User < ApplicationRecord
           :jwt_authenticatable, jwt_revocation_strategy: ::JwtDenylist
 
   has_many :auth_providers, dependent: :destroy
+  has_many :comments, dependent: :destroy
   has_many :subscriptions
   has_many :payments
   has_many :invoices
