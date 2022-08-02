@@ -6,4 +6,8 @@ class Invoice < ApplicationRecord
   has_many :payments
 
   enum status: { draft: 0, open: 1, paid: 2, uncollectible: 3, void: 4 }
+
+  def calculate_total(title)
+
+  end
 end

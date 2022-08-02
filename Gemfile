@@ -57,6 +57,13 @@ gem 'rack-cors', '~> 1.1', '>= 1.1.1'
 gem 'virtus', '~> 2.0'
 gem 'interactor', '~> 3.1', '>= 3.1.2'
 
+
+#Serialize Output
+gem 'active_model_serializers', '~> 0.10.13'
+
+# Pagination
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 gem 'byebug', '~> 11.1', '>= 11.1.3'
