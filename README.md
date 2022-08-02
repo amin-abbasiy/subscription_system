@@ -1,5 +1,5 @@
 # Subscription System
-    Docflow subscription system
+    Subscription system
 ### ENV
 Remove sample from 2 files `database.sample.yml`, `application.sample.yml`.
 
