@@ -1,5 +1,14 @@
 # Subscription System
     Subscription system
+
+### ERD
+
+You can find docs under `erd`  folder
+
+### Docs
+
+You can find docs under `docs`  folder
+
 ### ENV
 Remove sample from 2 files `database.sample.yml`, `application.sample.yml`.
 
