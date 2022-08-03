@@ -29,4 +29,4 @@ class Invoice::TotalAmount
   end
 end
 
-# ::Invoice::TotalAmount.call(invoice: , title: )
+# ::Invoice::TotalAmount.call(organisation: , title: )
